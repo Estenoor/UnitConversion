@@ -8,45 +8,49 @@
 </head>
 <body>
     <div id="app">
-        <nav class="container navbar navbar-expand-lg navbar-light background-grey">
-            <div class="collapse navbar-collapse row" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item col-lg">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active col">
-                        <a class="nav-link" href="length.html">Length<span class="sr-only background-light-blue">(current)</span></a>
-                    </li>
                     <li class="nav-item col">
-                        <a class="nav-link" href="DigitalStorageConversion.html">Digital Storage</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="CookingConversion.html">Cooking</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="VolumeConv.html">Volume</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="TempConv.html">Temperature</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-            <p>
-                <div class="container converter">
-                    <div class="row">
-                        <div class="col-md-5">
+        <p>
+            <div class="container converter">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="input-column">
                             <div class="font-header">
                                 Feet
                             </div>
                             <div class="input-box">
                                 <input v-model="feet" v-on:input="convertToY" />
                             </div>
+        </nav>
+        <nav class="container navbar navbar-expand-lg navbar-light background-grey">
+            <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item col-lg">
+                        <a class="nav-link" href="DigitalStorageConversion.html">Digital Storage</a>
+                    </li>
+                    </li>
+                        <a class="nav-link" href="index.html">Home</a>
+                    <li class="nav-item active col">
+                        <a class="nav-link" href="length.html">Length<span class="sr-only background-light-blue">(current)</span></a>
+                    <li class="nav-item col">
+                    </li>
+                        <a class="nav-link" href="CookingConversion.html">Cooking</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="VolumeConv.html">Volume</a>
+                    </li>
+                        <a class="nav-link" href="TempConv.html">Temperature</a>
+                    <li class="nav-item col">
+                    </li>
+                </ul>
+            </div>
                         </div>
-                        <div class="col-md-2">
-                            <div class="divider"></div>
-                        </div>
-                        <div class="col-md-5">
+                    </div>
+                    <div class="col-md-2">
+                        <div class="divider"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="input-column">
+
                             <div class="font-header">
                                 Yards
                             </div>
@@ -56,7 +60,9 @@
                         </div>
                     </div>
                 </div>
-            </p>
+            </div>
+            <div class="banner-bottom"></div>
+        </p>
     </div>
 </body>
 </html>
