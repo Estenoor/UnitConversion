@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <nav class="container navbar navbar-expand-lg navbar-light background-grey">
+            <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item col-lg">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="length.html">Length</a>
+                    </li>
+                    <li class="nav-item active col">
+                        <a class="nav-link" href="DigitalStorageConversion.html">Digital Storage<span class="sr-only background-light-blue">(current)</span></a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="CookingConversion.html">Cooking</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="VolumeConv.html">Volume</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="TempConv.html">Temperature</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            <p>
+                <div class="container converter">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="font-header">
+                                Megabyte
+                            </div>
+                            <div class="input-box">
+                                <input v-model="Mega" v-on:input="convertToG" />
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="divider"></div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="font-header">
+                                Gigabyte
+                            </div>
+                            <div class="input-box">
+                                <input v-model="Giga" v-on:input="convertToM" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            Mega: 0,
+            Giga: 0
+        },
+        methods: {
+            convertToY: function () {
+                this.Giga = parseFloat(this.Mega) / parseFloat(1000);
+            },
+            convertToF: function () {
+                this.Mega = parseFloat(this.Giga) * parseFloat(1000);
+            }
+        }
+    })
+</script>
