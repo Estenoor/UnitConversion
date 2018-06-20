@@ -9,29 +9,36 @@
 <body>
     <div id="app">
         <p>
+
             <div class="container converter">
                 <div class="row">
                     <div class="col-md-5">
-                        <div class="font-header">
-                            Feet
-                        </div>
-                        <div class="input-box">
-                            <input v-model="feet" v-on:input="convertToY" />
+                        <div class="input-column">
+                            <div class="font-header">
+                                Feet
+                            </div>
+                            <div class="input-box">
+                                <input v-model="feet" v-on:input="convertToY" />
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-2">
                         <div class="divider"></div>
                     </div>
                     <div class="col-md-5">
-                        <div class="font-header">
-                            Yards
-                        </div>
-                        <div class="input-box">
-                            <input v-model="yards" v-on:input="convertToF" />
+                        <div class="input-column">
+
+                            <div class="font-header">
+                                Yards
+                            </div>
+                            <div class="input-box">
+                                <input v-model="yards" v-on:input="convertToF" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="banner-bottom"></div>
         </p>
     </div>
 </body>
