@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Volume Conversions</title>
+    <link rel="stylesheet" href="../Scripts/bootstrap.css" />
+    <link rel="stylesheet" href="../Scripts/team-egg-style.css" />
+</head>
+        
+<nav class="container navbar navbar-expand-lg navbar-light background-grey">
+    <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">     
+            <li class="nav-item active col-lg">
+                <a class="nav-link" href="index.html">Home<span class="sr-only background-light-blue">(current)</span></a>
+            </li>
+            <li class="nav-item col">
+                <a class="nav-link" href="length.html">Length</a>
+            </li>
+            <li class="nav-item col">
+                <a class="nav-link" href="DigitalStorageConversion.html">Digital Storage</a>
+            </li>
+            <li class="nav-item col">
+                <a class="nav-link" href="CookingConversion.html">Cooking</a>
+            </li>
+            <li class="nav-item col">
+                <a class="nav-link" href="VolumeConv.html">Volume</a>
+            </li>
+            <li class="nav-item col">
+                <a class="nav-link" href="TempConv.html">Temperature</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div id="app">
+        <p>
+            <div class="container converter">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="font-header">
+                            Gallons
+                        </div>
+                        <div class="input-box">
+                            <input v-model="gallons" v-on:input="convertToPints" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="divider"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="font-header">
+                            Pints
+                        </div>
+                        <div class="input-box">
+                            <input v-model="pints" v-on:input="convertToGallons" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            gallons: 0,
+            pints: 0
+        },
+        methods: {
+            convertToGallons: function () {
+                this.gallons = parseFloat(this.pints) / parseFloat(8);
+            },
+            convertToPints: function () {
+                this.pints = parseFloat(this.gallons) * parseFloat(8);
+            }
+        }
+    })
+</script>
