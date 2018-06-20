@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Length Conversions</title>
+    <link rel="stylesheet" href="../Scripts/bootstrap.css" />
+    <link rel="stylesheet" href="../Scripts/team-egg-style.css" />
+</head>
+<body>
+    <div id="app">
+        <p>
+            <div class="container converter">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="font-header">
+                            Feet
+                        </div>
+                        <div class="input-box">
+                            <input v-model="feet" v-on:input="convertToY" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="divider"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="font-header">
+                            Yards
+                        </div>
+                        <div class="input-box">
+                            <input v-model="yards" v-on:input="convertToF" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            feet: 0,
+            yards: 0
+        },
+        methods: {
+            convertToY: function () {
+                this.yards = parseFloat(this.feet) / parseFloat(3);
+            },
+            convertToF: function () {
+                this.feet = parseFloat(this.yards) * parseFloat(3);
+            }
+        }
+    })
+</script>
