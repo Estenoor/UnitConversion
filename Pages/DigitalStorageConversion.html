@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Digital Storage Conversion</title>
+    <link rel="stylesheet" href="../Scripts/bootstrap.css" />
+    <link rel="stylesheet" href="../Scripts/team-egg-style.css" />
 </head>
 <body>
     <div id="app">
@@ -30,31 +32,32 @@
                 </ul>
             </div>
         </nav>
-            <p>
-                <div class="container converter">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="font-header">
-                                Megabyte
-                            </div>
-                            <div class="input-box">
-                                <input v-model="Mega" v-on:input="convertToG" />
-                            </div>
+        <p>
+            <div class="container converter">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="font-header">
+                            Megabyte
                         </div>
-                        <div class="col-md-2">
-                            <div class="divider"></div>
+                        <div class="input-box">
+                            <input v-model="Mega" v-on:input="convertToG" />
                         </div>
-                        <div class="col-md-5">
-                            <div class="font-header">
-                                Gigabyte
-                            </div>
-                            <div class="input-box">
-                                <input v-model="Giga" v-on:input="convertToM" />
-                            </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="divider"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="font-header">
+                            Gigabyte
+                        </div>
+                        <div class="input-box">
+                            <input v-model="Giga" v-on:input="convertToM" />
                         </div>
                     </div>
                 </div>
-            </p>
+            </div>
+            <div class="banner-bottom"></div>
+        </p>
     </div>
 </body>
 </html>
