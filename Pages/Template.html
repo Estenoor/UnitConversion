@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../Scripts/team-egg-style.css" />
 </head>
 <body>
-    <div class="banner-top font-banner font-light-blue">
-
+    <div class="banner-top background-black">
+        <h1 class="font-banner font-light-blue">Professional and Accurate Conversions</h1>
     </div>
     <!--Top Banner Div-->
 
@@ -20,18 +20,22 @@
 
     <div id="app" class="converter container">
         <div class="row">
-            <div class="col-md-5 input-column">
 
-            </div> 
+            <!--1st Column Div-->
+            <div class="col-md-5 input-column">
+                <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
+                <input class="input-box" v-model="right-input" v:on:input"" />
+            </div>
             <!--1st Column Div-->
             
-            <div class="col-md-2">
-
-            </div>
+            <!--Seperation Div-->
+            <div class="col-md-2"></div>
             <!--Seperation Div-->
 
+            <!--2nd Column Div-->
             <div class="col-md-5 input-column">
-
+                <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
+                <input class="input-box" v-model="left-input" v:on:input"" />
             </div>
             <!--2nd Column Div-->
         </div>
@@ -39,9 +43,10 @@
     </div>
     <!--Converter Div-->
 
-    <div class="banner-bottom font-banner">
+    <div class="banner-bottom background-black">
 
     </div>
     <!--Bottom Banner Div-->
 </body>
 </html>
+<script src="https://unpkg.com/vue"></script>
