@@ -73,10 +73,10 @@
         },
         methods: {
             convertToGallons: function () {
-                this.gallons = parseFloat(this.pints) * parseFloat(8);
+                this.gallons = parseFloat(this.pints) / parseFloat(8);
             },
             convertToPints: function () {
-                this.pints = parseFloat(this.gallons) / parseFloat(8);
+                this.pints = parseFloat(this.gallons) * parseFloat(8);
             }
         }
     })
