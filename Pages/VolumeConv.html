@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Volume Conversions</title>
+    <link rel="stylesheet" href="../Scripts/bootstrap.css" />
+    <link rel="stylesheet" href="../Scripts/team-egg-style.css" />
+</head>
+<body>
+    <div id="app">
+        <p>
+            <div class="container converter">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="font-header">
+                            Gallons
+                        </div>
+                        <div class="input-box">
+                            <input v-model="gallons" v-on:input="convertToP" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="divider"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="font-header">
+                            Pints
+                        </div>
+                        <div class="input-box">
+                            <input v-model="pints" v-on:input="convertToG" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            gallons: 0,
+            pints: 0
+        },
+        methods: {
+            convertToP: function () {
+                this.gallons = parseFloat(this.gallons) * parseFloat(8);
+            },
+            convertToG: function () {
+                this.pints = parseFloat(this.pints) / parseFloat(8);
+            }
+        }
+    })
+</script>
