@@ -2,9 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Length Conversions</title>
-    <link rel="stylesheet" href="../Scripts/bootstrap.css" />
-    <link rel="stylesheet" href="../Scripts/team-egg-style.css" />
+    <title></title>
 </head>
 <body>
     <div id="app">
@@ -14,11 +12,11 @@
                     <li class="nav-item col-lg">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item active col">
-                        <a class="nav-link" href="length.html">Length<span class="sr-only background-light-blue">(current)</span></a>
-                    </li>
                     <li class="nav-item col">
-                        <a class="nav-link" href="DigitalStorageConversion.html">Digital Storage</a>
+                        <a class="nav-link" href="length.html">Length</a>
+                    </li>
+                    <li class="nav-item active col">
+                        <a class="nav-link" href="DigitalStorageConversion.html">Digital Storage<span class="sr-only background-light-blue">(current)</span></a>
                     </li>
                     <li class="nav-item col">
                         <a class="nav-link" href="CookingConversion.html">Cooking</a>
@@ -37,10 +35,10 @@
                     <div class="row">
                         <div class="col-md-5">
                             <div class="font-header">
-                                Feet
+                                Megabyte
                             </div>
                             <div class="input-box">
-                                <input v-model="feet" v-on:input="convertToY" />
+                                <input v-model="Mega" v-on:input="convertToG" />
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -48,10 +46,10 @@
                         </div>
                         <div class="col-md-5">
                             <div class="font-header">
-                                Yards
+                                Gigabyte
                             </div>
                             <div class="input-box">
-                                <input v-model="yards" v-on:input="convertToF" />
+                                <input v-model="Giga" v-on:input="convertToM" />
                             </div>
                         </div>
                     </div>
@@ -65,15 +63,15 @@
     var app = new Vue({
         el: '#app',
         data: {
-            feet: 0,
-            yards: 0
+            Mega: 0,
+            Giga: 0
         },
         methods: {
             convertToY: function () {
-                this.yards = parseFloat(this.feet) / parseFloat(3);
+                this.Giga = parseFloat(this.Mega) / parseFloat(1000);
             },
             convertToF: function () {
-                this.feet = parseFloat(this.yards) * parseFloat(3);
+                this.Mega = parseFloat(this.Giga) * parseFloat(1000);
             }
         }
     })
