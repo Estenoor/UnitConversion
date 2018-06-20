@@ -36,7 +36,12 @@
     font-family: QuickSand_Book;
 }
 
-.banner {
+.banner-top {
+    height: 150px;
+    width: 1000px;
+}
+
+.banner-bottom {
     height: 200px;
     width: 1000px;
 }
