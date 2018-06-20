@@ -13,10 +13,10 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div class="font-header">
-                            Feet
+                            Teaspoons
                         </div>
                         <div class="input-box">
-                            <input v-model="cups" v-on:input="convertToY" />
+                            <input v-model="teaspoons" v-on:input="convertToTablespoons" />
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -24,10 +24,10 @@
                     </div>
                     <div class="col-md-5">
                         <div class="font-header">
-                            Yards
+                            Tablespoons
                         </div>
                         <div class="input-box">
-                            <input v-model="quarts" v-on:input="convertToF" />
+                            <input v-model="tablespoons" v-on:input="convertToTeaspoons" />
                         </div>
                     </div>
                 </div>
@@ -41,15 +41,15 @@
     var app = new Vue({
         el: '#app',
         data: {
-            cups: 0,
-            quarts: 0
+            tablespoons: 0,
+            teaspoons: 0
         },
         methods: {
-            convertToCups: function () {
-                this.quarts = parseFloat(this.cups) / parseFloat(4);
+            convertToTablespoons: function () {
+                this.tablespoons = parseFloat(this.teaspoons) * parseFloat(3);
             },
-            convertToQuarts: function () {
-                this.cups = parseFloat(this.quarts) * parseFloat(4);
+            convertToTeaspoons: function () {
+                this.teaspoons = parseFloat(this.tablespoons) / parseFloat(3);
             }
         }
     })
