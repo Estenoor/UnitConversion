@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="../Scripts/team-egg-style.css" />
 </head>
 <body>
-    <div class="banner-top background-black" >
+    <!--Top Banner Div-->
+    <div class="banner-top background-black">
         <h1 class="font-banner font-light-blue">Professional and Accurate Conversions</h1>
     </div>
     <!--Top Banner Div-->
-
+    <!--Navigation Div-->
     <div class="navigation background-light-blue">
         <h2 class="navigation-bar">PLACEHOLDER FOR NAVIGATION BAR</h2>
     </div>
     <!--Navigation Div-->
-        
+    <!--Converter Div-->
     <div id="app" class="converter container">
+        <!--Row Div-->
         <div class="row">
 
             <!--1st Column Div-->
@@ -27,11 +29,9 @@
                 <input class="input-box" v-model="right-input" v:on:input"" />
             </div>
             <!--1st Column Div-->
-            
             <!--Seperation Div-->
             <div class="col-md-2"></div>
             <!--Seperation Div-->
-
             <!--2nd Column Div-->
             <div class="col-md-5 input-column" align="center">
                 <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
@@ -42,7 +42,7 @@
         <!--Row Div-->
     </div>
     <!--Converter Div-->
-
+    <!--Bottom Banner Div-->
     <div class="banner-bottom background-black">
 
     </div>
@@ -50,3 +50,13 @@
 </body>
 </html>
 <script src="https://unpkg.com/vue"></script>
+var app = new Vue({
+        el: '#app',
+        data: {
+           
+        },
+        methods: {
+           
+            }
+        }
+    })

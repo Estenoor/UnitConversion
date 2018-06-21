@@ -62,13 +62,13 @@
 .banner-top {
     padding-left: 200px;
     padding-right: 200px;
-    height: 150px;
+    height: 100px;
     
 }
 .banner-bottom {
     padding-left: 200px;
     padding-right: 200px;
-    height: 200px;
+    height: 100px;
 }
 .navigation {
     justify-content: center;
@@ -83,8 +83,8 @@
 .converter {
     padding-left: 125px;
     padding-right: 125px;
-    padding-bottom: 143px;
-    padding-top: 143px;
+    padding-bottom: 7px;
+    padding-top: 100px;
 }
 .input-column {
     width: 260px;
@@ -92,12 +92,9 @@
 }
 .input-header {
     text-align: center;
-    width: 260px;
     height: 70px;
 }
 .imput-box {
-    width: 260px;
-    height: 168px;
     padding-bottom: 70px;
 }
 
