@@ -87,17 +87,17 @@
     padding-top: 143px;
 }
 .input-column {
-    justify-content: center;
     width: 260px;
     height: 308px;
 }
 .input-header {
+    text-align: center;
     width: 260px;
     height: 70px;
 }
 .imput-box {
     width: 260px;
     height: 168px;
-    padding-bottom:70px;
+    padding-bottom: 70px;
 }
 
