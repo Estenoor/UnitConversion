@@ -26,7 +26,7 @@
             <!--1st Column Div-->
             <div class="col-md-5 input-column" align="center">
                 <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
-                <input class="input-box" v-model="right-input" v:on:input"" />
+                <input class="input-box" v-model="rightInput" v:on:input"rightToLeft" />
             </div>
             <!--1st Column Div-->
             <!--Seperation Div-->
@@ -35,7 +35,7 @@
             <!--2nd Column Div-->
             <div class="col-md-5 input-column" align="center">
                 <h2 class="input-header font-header">(INSERT UNIT HERE)</h2>
-                <input class="input-box" v-model="left-input" v:on:input"" />
+                <input class="input-box" v-model="leftInput" v:on:input"leftToRight" />
             </div>
             <!--2nd Column Div-->
         </div>
@@ -49,14 +49,20 @@
     <!--Bottom Banner Div-->
 </body>
 </html>
-<script src="https://unpkg.com/vue"></script>
-var app = new Vue({
+<script src="https://unpkg.com/vue">
+    var app = new Vue({
         el: '#app',
         data: {
-           
+            rightInput: '',
+            leftInput: ''
         },
         methods: {
-           
+            rightToLeft: function() {
+
+            },
+            leftToRight: function() {
+
             }
         }
     })
+</script>
